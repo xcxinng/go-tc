@@ -8,8 +8,8 @@ import (
 	"net"
 	"os"
 
-	"github.com/florianl/go-tc"
-	"github.com/florianl/go-tc/core"
+	"github.com/xcxinng/go-tc"
+	"github.com/xcxinng/go-tc/core"
 	"github.com/jsimonetti/rtnetlink"
 	"golang.org/x/sys/unix"
 )

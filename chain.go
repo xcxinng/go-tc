@@ -1,7 +1,7 @@
 package tc
 
 import (
-	"github.com/florianl/go-tc/internal/unix"
+	"github.com/xcxinng/go-tc/internal/unix"
 	"github.com/mdlayher/netlink"
 )
 
