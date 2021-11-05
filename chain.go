@@ -1,8 +1,8 @@
 package tc
 
 import (
-	"github.com/xcxinng/go-tc/internal/unix"
 	"github.com/mdlayher/netlink"
+	"github.com/xcxinng/go-tc/internal/unix"
 )
 
 // Chain represents a collection of filter
