@@ -1,6 +1,7 @@
 package tc
 
 import (
+	"encoding/binary"
 	"fmt"
 	"net"
 
@@ -244,7 +245,7 @@ func unmarshalFlower(data []byte, info *Flower) error {
 			tmp := ad.Uint16()
 			info.KeyVlanEthType = &tmp
 		case tcaFlowerKeyEncKeyID:
-			tmp := ad.Uint32()
+			tmp := binary.BigEndian.Uint32(ad.Bytes())
 			info.KeyEncKeyID = &tmp
 		case tcaFlowerKeyEncIPv4Src:
 			tmp := uint32ToIP(ad.Uint32())
