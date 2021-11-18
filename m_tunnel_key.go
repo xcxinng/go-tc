@@ -1,6 +1,7 @@
 package tc
 
 import (
+	"encoding/binary"
 	"fmt"
 	"net"
 
@@ -138,7 +139,7 @@ func unmarshalTunnelKey(data []byte, info *TunnelKey) error {
 			concatError(multiError, err)
 			info.KeyEncDst = &tmp
 		case tcaTunnelKeyEncKeyID:
-			tmp := ad.Uint32()
+			tmp := binary.BigEndian.Uint32(ad.Bytes())
 			info.KeyEncKeyID = &tmp
 		case tcaTunnelKeyEncDstPort:
 			tmp := ad.Uint16()
